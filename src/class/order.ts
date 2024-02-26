@@ -1,4 +1,4 @@
-import { IStatus } from '../interfaces/IStatus';
+import { IStatus } from '../interfaces/status-protocol';
 import { Logger } from './logger';
 import { ShoppingCart } from './shopping-cart';
 

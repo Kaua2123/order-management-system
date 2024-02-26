@@ -1,4 +1,4 @@
-import { ICartItem } from '../interfaces/ICart-item';
+import { ICartItem } from '../interfaces/cart-item-protocol';
 
 export class CartItem implements ICartItem {
   constructor(
