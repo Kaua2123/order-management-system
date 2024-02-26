@@ -1,4 +1,6 @@
 import { CartItem } from './class/cart-item';
+import { Logger } from './class/logger';
+import { Order } from './class/order';
 import { ShoppingCart } from './class/shopping-cart';
 import { TenPercentDiscountOver100 } from './class/ten-percent-discount-over-100';
 
@@ -14,3 +16,6 @@ console.log(shoppingCart.totalWithDiscount());
 shoppingCart.discount = new TenPercentDiscountOver100();
 console.log(shoppingCart.discount);
 console.log(shoppingCart.totalWithDiscount());
+const logger = new Logger();
+const order = new Order(shoppingCart, logger);
+order.closeOrder();
