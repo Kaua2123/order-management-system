@@ -1,12 +1,12 @@
-import { ICartItem } from '../interfaces/cart-item-protocol';
+import { CartItemProtocol } from '../interfaces/cart-item-protocol';
 import { DiscountStrategyProtocol } from '../interfaces/discount-strategy-protocol';
 import { DiscountStrategy } from './discount-strategy';
 
 export class ShoppingCart {
-  private readonly _items: ICartItem[] = [];
+  private readonly _items: CartItemProtocol[] = [];
   private _discount: DiscountStrategyProtocol = new DiscountStrategy();
 
-  addItem(...items: ICartItem[]): void {
+  addItem(...items: CartItemProtocol[]): void {
     items.forEach((item) => this._items.push(item));
   }
 
@@ -14,7 +14,7 @@ export class ShoppingCart {
     this._items.splice(index, 1);
   }
 
-  get items(): ICartItem[] {
+  get items(): CartItemProtocol[] {
     return this._items;
   }
 

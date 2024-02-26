@@ -1,4 +1,4 @@
-export interface ICartItem {
+export interface CartItemProtocol {
   name: string;
   price: number;
 }
